@@ -19,6 +19,7 @@
 		5A87F46B2B9A566200F2BEAD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F46A2B9A566200F2BEAD /* SearchViewController.swift */; };
 		5A87F46D2B9A569000F2BEAD /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F46C2B9A569000F2BEAD /* DownloadsViewController.swift */; };
 		5A87F4742B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F4732B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift */; };
+		5AE592FE2B9AF64100AFA58C /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5A87F46A2B9A566200F2BEAD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5A87F46C2B9A569000F2BEAD /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		5A87F4732B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5A87F4732B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift */,
+				5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A87F4692B9A563900F2BEAD /* UpcomingViewController.swift in Sources */,
+				5AE592FE2B9AF64100AFA58C /* HeroHeaderUIView.swift in Sources */,
 				5A87F46B2B9A566200F2BEAD /* SearchViewController.swift in Sources */,
 				5A87F46D2B9A569000F2BEAD /* DownloadsViewController.swift in Sources */,
 				5A87F4672B9A560C00F2BEAD /* HomeViewController.swift in Sources */,
