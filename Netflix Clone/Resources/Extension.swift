@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension String {
+    func capitializeFirstLetter() -> String {
+        return self.prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+}
+
