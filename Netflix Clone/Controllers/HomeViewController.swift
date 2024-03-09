@@ -17,7 +17,7 @@ enum Sections: Int {
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles : [String] = ["Trending Movies" , "Popular" , "Trending Tv" , "Upcoming Movies" , "Top reted"]
+    let sectionTitles : [String] = ["Trending Movies" , "Trending Tv" , "Popular" , "Upcoming Movies" , "Top reted"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero,style: .grouped)
