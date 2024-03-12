@@ -26,6 +26,8 @@
 		5AABBB5D2B9B5E3800F71525 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABBB5C2B9B5E3800F71525 /* Title.swift */; };
 		5AABBB5F2B9B63FB00F71525 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABBB5E2B9B63FB00F71525 /* Extension.swift */; };
 		5AE592FE2B9AF64100AFA58C /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */; };
+		5AEE3C762BA07E9500D319BB /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE3C752BA07E9500D319BB /* TitleTableViewCell.swift */; };
+		5AEE3C782BA0874D00D319BB /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE3C772BA0874D00D319BB /* TitleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		5AABBB5C2B9B5E3800F71525 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		5AABBB5E2B9B63FB00F71525 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		5AEE3C752BA07E9500D319BB /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		5AEE3C772BA0874D00D319BB /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				5A87F4732B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift */,
 				5AE592FD2B9AF64100AFA58C /* HeroHeaderUIView.swift */,
 				5A6BEF972B9C545B004BC1AA /* TitleCollectionViewCell.swift */,
+				5AEE3C752BA07E9500D319BB /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		5A87F4702B9A5EE000F2BEAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5AEE3C772BA0874D00D319BB /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 				5A6BEF982B9C545B004BC1AA /* TitleCollectionViewCell.swift in Sources */,
 				5A87F4742B9A5F3400F2BEAD /* CollectionViewTableViewCell.swift in Sources */,
 				5A87F4532B9A544600F2BEAD /* MainTabBarViewController.swift in Sources */,
+				5AEE3C762BA07E9500D319BB /* TitleTableViewCell.swift in Sources */,
 				5AABBB5F2B9B63FB00F71525 /* Extension.swift in Sources */,
 				5AABBB5B2B9B579A00F71525 /* APICaller.swift in Sources */,
+				5AEE3C782BA0874D00D319BB /* TitleViewModel.swift in Sources */,
 				5A87F44F2B9A544600F2BEAD /* AppDelegate.swift in Sources */,
 				5A87F4512B9A544600F2BEAD /* SceneDelegate.swift in Sources */,
 			);
