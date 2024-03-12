@@ -13,7 +13,10 @@ class TitleTableViewCell: UITableViewCell {
     
     private let playTitleButton: UIButton = {
         let button = UIButton()
+        let image = UIImage(systemName: "play.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20))
+        button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .white
         return button
     }()
     
@@ -27,6 +30,7 @@ class TitleTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -42,17 +46,31 @@ class TitleTableViewCell: UITableViewCell {
     private func applyConstraints() {
         let titlesPosterUIImageViewConstaints = [
             titlesPosterUIImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titlesPosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor , constant: 15),
-            titlesPosterUIImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
+            titlesPosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor , constant: 10),
+            titlesPosterUIImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             titlesPosterUIImageView.widthAnchor.constraint(equalToConstant: 100)
         ]
         
+        let titleLabelConstraints = [
+            titleLabel.leadingAnchor.constraint(equalTo: titlesPosterUIImageView.trailingAnchor, constant: 20),
+            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ]
+        
+        let playTitleButtonConstraints = [
+            playTitleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -20),
+            playTitleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ]
+        
         NSLayoutConstraint.activate(titlesPosterUIImageViewConstaints)
+        NSLayoutConstraint.activate(titleLabelConstraints)
+        NSLayoutConstraint.activate(playTitleButtonConstraints)
     }
     
     public func configure(with model: TitleViewModel){
-        guard let url = URL(string: model.posterURL) else {return}
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.posterURL)") else {return}
+        
         titlesPosterUIImageView.sd_setImage(with: url,completed:nil)
+        titleLabel.text = model.titleName
     }
     
     required init?(coder: NSCoder) {
