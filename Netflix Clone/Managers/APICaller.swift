@@ -11,6 +11,10 @@ struct Constants{
     static let API_KEY = "03a017898fbf9c4e46790a29a80d7bd7"
     
     static let baseUrl = "https://api.themoviedb.org"
+    
+    static let YoutubeAPI_KEY = "AIzaSyDvO4ucMEEKD9Bh0kZn9ruvQJKSsT15ZU0"
+    
+    static let youtubeBaseUrl = "https://youtube.googleapis.com/youtube/v3/search?"
 }
 
 class APICaller {
@@ -47,7 +51,6 @@ class APICaller {
             do{
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
                 completion(.success(results.results))
-                print(results)
             }
             catch{
                 print(error.localizedDescription)
@@ -137,6 +140,57 @@ class APICaller {
         
         task.resume()
     }
+    
+    func search(with query: String, completion: @escaping (Result<[Title],Error>) -> Void) {
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        guard let url = URL(string: "\(Constants.baseUrl)/3/search/movie?api_key=\(Constants.API_KEY)&query=\(query)") else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)){data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                completion(.success(results.results))
+            }catch{
+                
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
+    func getMovie(with query: String) {
+        
+        
+        guard let url = URL(string: "\(Constants.youtubeBaseUrl)q=\(query)&key=\(Constants.YoutubeAPI_KEY)") else {return}
+        print(url)
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)){data, _, error in
+            guard let data = data, error == nil else{
+                print("hata")
+                return
+            }
+            
+            do {
+                let results =  try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                print(results)
+            }catch{
+                print(error.localizedDescription)
+            }
+            
+        }
+        
+        task.resume()
+        
+        
+    }
+    
+    
     
     
     
