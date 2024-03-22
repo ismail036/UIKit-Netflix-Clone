@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct TitlePreviewViewModel {
+    let title:       String
+    let youtubeView: YoutubeItem
+    let titleOverview : String
+    
+}
